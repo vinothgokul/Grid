@@ -1,0 +1,39 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:is(html, body) {
+  height: 100vh;
+}
+
+header {
+  background-color: lightseagreen;
+  grid-area: header;
+}
+
+aside {
+  background-color: lightcoral;
+  grid-area: aside;
+}
+
+section {
+  background-color: lightblue;
+  grid-area: section;
+}
+
+footer {
+  background-color: red;
+  grid-area: footer;
+}
+
+body {
+  display: grid;
+  grid-template-areas: "header header header header" "aside section section section" "footer footer footer footer";
+  grid-template-rows: 70px auto 70px;
+  gap: 32px 40px;
+  text-align: center;
+}
